@@ -1,0 +1,77 @@
+.page-header {
+  background-color: $wallpi-black2;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 140px;
+
+  @include devices(lg) {
+    padding-top: 159px;
+    padding-bottom: 165px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #35302e;
+    background-blend-mode: overlay;
+    filter: brightness(1) grayscale(1);
+  }
+  .container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+  }
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    color: $wallpi-text-white;
+    font-size: 36px;
+    text-transform: uppercase;
+    @include devices(md) {
+      font-size: 43px;
+    }
+  }
+  &__shape {
+    display: inline-flex;
+    margin-bottom: 13px;
+  }
+}
+.wallpi-breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 10px;
+  @include devices(md) {
+    margin-bottom: 6px;
+  }
+  li {
+    font-size: 14px;
+    color: $wallpi-base;
+    display: flex;
+    align-items: center;
+    &:not(:last-of-type)::after {
+      content: '/';
+      position: relative;
+      top: -1px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    span,
+    a {
+      color: inherit;
+      display: inline-flex;
+      line-height: 1em;
+    }
+    a {
+      @include borderHover();
+    }
+  }
+}

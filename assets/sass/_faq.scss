@@ -1,0 +1,160 @@
+.faq-page {
+	padding-top: 104px;
+	padding-bottom: 176px;
+	background-color: rgba($wallpi-gray-rgb,0.8);
+	margin-bottom: -58px;
+	@media (max-width: 991px) {
+		padding-bottom: 80px;
+		padding-top: 52px;
+	}
+	.container {
+		@media (max-width: 1200px) {
+			max-width: 100%;
+		}
+	}
+	&__titlewrap {
+		position: relative;
+		margin-bottom: 85px;
+		padding-right: 225px;
+		@media (max-width: 991px) {
+			margin-bottom: 52px;
+		}
+		@media (max-width: 767px) {
+			padding-right: 0;
+		}
+	}
+	&__titlinner {
+		max-width: 750px;
+		padding-top: 6px;
+	}
+	&__title {
+		color: $wallpi-text;
+		font-weight: 600;
+		font-size: 43px;
+		line-height: 50px;
+		text-align: left;
+		margin-bottom: 25px;
+		@media (max-width: 767px) {
+			font-size: 32px;
+			line-height: 36px;
+			margin-bottom: 15px;
+		}
+	}
+	&__text {
+		color: $wallpi-text;
+		font-size: 18px;
+		line-height: 30px;
+		text-align: left;
+		margin-bottom: 0;
+	}
+	&__imgeffect {
+		position: absolute;
+		float: right;
+		right: 55px;
+		top: 0;
+		z-index: 1;
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__accordiontitle {
+		color: $wallpi-text;
+		font-weight: 600;
+		font-size: 26px;
+		line-height: 1;
+		margin-bottom: 30px;
+	}
+	&__accordion {
+		.accrodion {
+			border: 1px solid rgba($wallpi-text-gray-rgb, 0.2);
+			+.accrodion {
+				margin-top: 10px;
+			}
+		}
+
+		.accrodion-title {
+			padding: 20px 25px;
+			padding-right: 70px;
+			cursor: pointer;
+
+			@include devices(md) {
+				padding-left: 30px;
+			}
+			
+			h4 {
+				font-weight: 500;
+				color: $wallpi-text2;
+				font-size: 16px;
+				margin: 0;
+				transition: all 500ms ease;
+				position: relative;
+			}
+
+			&__icon {
+				width: 33px;
+				height: 33px;
+				position: absolute;
+				top: 50%;
+				right: -60px;
+				transform: translateY(-50%) scale(1);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 12px;
+				color: $wallpi-text;
+
+				&::before {
+					width: 33px;
+					height: 33px;
+					position: absolute;
+					background-color: rgba($wallpi-text-gray-rgb,0.1);
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					transition: all 500ms ease;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				&:hover {
+					&::before {
+						color: $wallpi-text-white;
+						background-color: $wallpi-base;
+					}
+				}
+			}
+
+		}
+		.active .accrodion-title {
+			border-bottom: 1px solid rgba($wallpi-text-gray-rgb, 0.2);
+		}
+		.active .accrodion-title__icon {
+			transform: translateY(-50%) scale(-1);
+			&::before {
+				color: $wallpi-text-white;
+				background-color: $wallpi-base;
+			}
+		}
+
+		.accrodion-content {
+			padding-top: 19px;
+			.inner {
+				padding: 0px 30px 24px 25px;
+				margin-top: -3px;
+
+				@include devices(md) {
+					padding-left: 30px;
+					padding-right: 60px;
+				}
+			}
+			p {
+				margin: 0;
+				font-size: 16px;
+				line-height: 32px;
+			}
+		}
+	}
+}

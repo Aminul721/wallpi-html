@@ -1,0 +1,234 @@
+.cta-one {
+	padding-bottom: 120px;
+	position: relative;
+
+	.container-fluid {
+		max-width: 1380px;
+	}
+
+	&__inner {
+		position: relative;
+		padding: 20px;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	&__title {
+		margin: 0;
+		text-transform: uppercase;
+		max-width: 513px;
+		width: 100%;
+		font-size: 35px;
+		line-height: 1.2em;
+		font-weight: bold;
+		margin-bottom: 15px;
+
+		span {
+			font-family: $wallpi-special-font;
+			font-weight: 400;
+		}
+
+		@include devices(lg) {
+			font-size: 50px;
+			margin-bottom: 30px;
+			margin-top: -10px;
+		}
+	}
+
+	&__content {
+		position: relative;
+		border: 1px solid $wallpi-white;
+		padding: 50px 20px;
+
+		@include devices(md) {
+			padding: 60px;
+		}
+
+		@include devices(xl) {
+			padding: 100px;
+		}
+	}
+
+	&__link {
+		&:hover {
+			color: $wallpi-white;
+		}
+
+		&::after {
+			background-color: $wallpi-black;
+		}
+
+		&::before {
+			background-color: $wallpi-base;
+		}
+	}
+}
+
+.cta-two {
+	position: relative;
+	background-color: $wallpi-base;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__shape {
+		position: absolute;
+		left: -10px;
+		top: 0;
+
+		img {
+			animation: shapeMove 3s linear 0s infinite;
+		}
+	}
+
+	&__content {
+		position: relative;
+		padding: 85px 0 90px;
+	}
+
+	&__sub-title {
+		font-family: $wallpi-special-font;
+		color: $wallpi-white;
+		font-size: 40px;
+		line-height: 1.2em;
+		margin: 0 0 2px;
+	}
+
+	&__title {
+		color: $wallpi-white;
+		font-size: 50px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin: 0 0 37px;
+
+		@media (min-width: 992px) and (max-width: 1199px) {
+			font-size: 44px;
+		}
+
+		@media (max-width: 767px) {
+			font-size: 35px;
+		}
+	}
+
+	&__thumb {
+		position: relative;
+
+		&__one {
+			position: relative;
+			right: 35px;
+			margin-top: -28px;
+
+			@media (max-width: 991px) {
+				right: 0;
+			}
+
+			&__shape {
+				position: absolute;
+				left: -40px;
+				top: -40px;
+				width: 545px;
+				height: 408px;
+			}
+
+			&__thumb {
+				width: 482px;
+				height: auto;
+				border: 20px solid $wallpi-white;
+				position: relative;
+				z-index: 2;
+				transform: rotate(5deg);
+
+				@media (max-width: 767px) {
+					width: 100%;
+				}
+
+				img {
+					width: 100%;
+					height: 282px;
+					object-fit: cover;
+
+					@media (max-width: 767px) {
+						height: auto;
+					}
+				}
+			}
+		}
+
+		&__two {
+			position: absolute;
+			right: -48px;
+			top: 195px;
+			z-index: 3;
+
+			@media (max-width: 991px) {
+				top: 45px;
+				right: 0;
+			}
+
+			@media (max-width: 767px) {
+				position: relative;
+				top: 0;
+				right: 0;
+			}
+
+			&__flower {
+				position: absolute;
+				right: -10px;
+				top: -121px;
+				z-index: 4;
+
+				@media (max-width: 767px) {
+					display: none;
+				}
+
+				img {
+					-webkit-animation-name: float-bob-y-2;
+					animation-name: float-bob-y-2;
+					-webkit-animation-duration: 4s;
+					animation-duration: 4s;
+					-webkit-animation-iteration-count: infinite;
+					animation-iteration-count: infinite;
+					-webkit-animation-timing-function: linear;
+					animation-timing-function: linear;
+				}
+			}
+
+			&__shape {
+				position: absolute;
+				left: -45px;
+				top: -60px;
+				width: 446px;
+				height: 421px;
+			}
+
+			&__thumb {
+				width: 360px;
+				height: auto;
+				border: 20px solid $wallpi-white;
+				position: relative;
+				z-index: 2;
+				transform: rotate(-17.2deg);
+
+				@media (max-width: 767px) {
+					width: 100%;
+				}
+
+				img {
+					width: 100%;
+					height: 215px;
+					object-fit: cover;
+
+					@media (max-width: 767px) {
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}

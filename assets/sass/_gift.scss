@@ -1,0 +1,110 @@
+.gift-page {
+	padding: 120px 0;
+	padding-top: 100px;
+
+	@media (max-width: 767px) {
+		padding: 80px 0;
+		padding-top: 60px;
+	}
+
+	&__carousel {
+		.owl-nav {
+			@include devices(lg) {
+				display: none;
+			}
+		}
+	}
+
+}
+
+.gift-card-one {
+	background-repeat: no-repeat;
+	background-position: left top;
+	border: 1px solid $wallpi-border-color;
+	text-align: center;
+	padding: 30px;
+	position: relative;
+	transition: all 500ms ease;
+
+	&:hover {
+		box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+	}
+
+	&__inner {
+		padding: 45px;
+		border: 6px solid $wallpi-black;
+		transition: all 500ms ease;
+	}
+
+	&:hover &__inner {
+		border-color: $wallpi-base;
+	}
+
+	&__flower {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: auto !important;
+		animation: flowerRotate 2s linear 0s infinite;
+	}
+
+	&__title {
+		margin: 0;
+		text-transform: uppercase;
+		color: $wallpi-black;
+		font-weight: bold;
+		font-size: 25px;
+		line-height: 1em;
+		margin-top: -5px;
+
+		@include devices(md) {
+			font-size: 30px;
+		}
+
+		a {
+			@include borderHover;
+			color: inherit;
+
+			&:hover {
+				color: $wallpi-base;
+			}
+		}
+	}
+
+	&__price {
+		margin: 0;
+		font-size: 20px;
+		color: $wallpi-base;
+		line-height: 1.5em;
+	}
+
+	&__code {
+		margin: 0;
+		font-size: 16px;
+		color: $wallpi-black;
+		line-height: 22px;
+	}
+
+	&__shape {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: auto !important;
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+
+	&__text {
+		margin: 0;
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: $wallpi-letter-space-xl;
+		line-height: 22px;
+		margin-bottom: 23px;
+	}
+
+	&__link {
+		font-size: 10px;
+		padding: 11px 29.5px;
+	}
+}

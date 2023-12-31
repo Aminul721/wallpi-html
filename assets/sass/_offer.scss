@@ -1,0 +1,95 @@
+.offer-one {
+	padding-bottom: 120px;
+
+	@media (max-width: 767px) {
+		padding-bottom: 80px;
+	}
+
+	&--home {
+		padding: 100px 0;
+
+		@media (max-width: 767px) {
+			padding: 80px 0;
+		}
+	}
+
+	.container-fluid {
+		max-width: 1604px;
+	}
+
+	&__card {
+		padding: 20px;
+		background-size: cover;
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			background: linear-gradient(90deg, rgba($wallpi-white-rgb, 0.13) 0px, rgba($wallpi-white-rgb, 0.13) 77%, rgba($wallpi-white-rgb, 0.5) 92%, rgba($wallpi-white-rgb, 0));
+			content: "";
+			height: 200%;
+			left: -210%;
+			opacity: 0;
+			position: absolute;
+			top: -50%;
+			transition: all 0.7s ease 0s;
+			width: 200%;
+		}
+
+		&:hover::before {
+			left: -30%;
+			opacity: 1;
+			top: -20%;
+			transition-duration: 0.7s, 0.7s, 0.15s;
+			transition-property: left, top, opacity;
+			transition-timing-function: linear;
+		}
+
+		&__inner {
+			position: relative;
+			border: 1px solid $wallpi-white;
+			padding: 40px;
+
+			@include devices(lg) {
+				padding: 50px;
+			}
+		}
+
+		&__shape {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+
+			@include devices(lg) {
+				display: block;
+			}
+		}
+
+		&__value {
+			font-family: $wallpi-special-font;
+			font-weight: 400;
+			font-size: 30px;
+			color: $wallpi-base;
+			line-height: 1;
+			margin: 0;
+
+			@include devices(lg) {
+				font-size: 40px;
+			}
+		}
+
+		&__title {
+			position: relative;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin: 0;
+			font-size: 30px;
+			line-height: 1.2em;
+			margin-bottom: 17px;
+
+			@include devices(lg) {
+				font-size: 40px;
+			}
+		}
+	}
+}

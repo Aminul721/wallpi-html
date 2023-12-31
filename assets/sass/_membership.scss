@@ -1,0 +1,207 @@
+.membership-one {
+	padding: 120px 0;
+	padding-top: 100px;
+
+	@media (max-width: 767px) {
+		padding: 80px 0;
+		padding-top: 60px;
+	}
+
+	.sec-title {
+		text-align: center;
+		padding-bottom: 25px;
+	}
+
+	&__tab__list {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 40px;
+		flex-wrap: wrap;
+
+		li {
+			cursor: pointer;
+
+			span {
+				display: block;
+				font-size: 10px;
+				background-color: $wallpi-gray;
+				transition: all 500ms ease;
+				text-transform: uppercase;
+				font-weight: 600;
+				letter-spacing: $wallpi-letter-space;
+				padding: 15px 20px;
+				line-height: 1.2em;
+				color: $wallpi-text;
+			}
+
+			&.active-btn span,
+			&:hover span {
+				background-color: $wallpi-base;
+				color: $wallpi-white;
+			}
+		}
+	}
+
+	&__card {
+		background-repeat: no-repeat;
+		background-position: top right;
+		border: 1px solid $wallpi-border-color;
+		padding: 50px;
+		background-color: $wallpi-white;
+		transition: all 500ms ease;
+
+		&:hover {
+			border-color: $wallpi-white;
+			box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+		}
+
+		&__price {
+			font-family: $wallpi-font;
+			color: $wallpi-black;
+			line-height: 1;
+			font-size: 40px;
+			line-height: 1em;
+			font-weight: 500;
+		}
+
+		&__tagline {
+			margin: 0;
+			font-size: 16px;
+			font-family: $wallpi-font;
+			line-height: 2.5em;
+			color: $wallpi-text;
+			border-bottom: 1px solid $wallpi-border-color;
+			padding-bottom: 16px;
+			margin-bottom: 33px;
+		}
+
+		&__text {
+			margin: 0;
+			font-weight: 600;
+			color: $wallpi-black;
+			font-size: 16px;
+			line-height: 2.5em;
+			margin-top: 13px;
+		}
+
+		&__list {
+			margin-bottom: 26px;
+
+			li {
+				position: relative;
+				font-size: 16px;
+				line-height: 2.5em;
+				color: $wallpi-text;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				>i {
+					font-size: 14px;
+					color: $wallpi-base;
+					margin-right: 10px;
+					position: relative;
+					top: 1px;
+				}
+			}
+		}
+	}
+}
+
+.membership-two {
+	padding: 120px 0;
+	padding-top: 100px;
+
+	@media (max-width: 767px) {
+		padding: 80px 0;
+		padding-top: 60px;
+	}
+
+	&--padding {
+		padding: 120px 0;
+
+		@media (max-width: 767px) {
+			padding: 80px 0;
+		}
+	}
+
+	.sec-title {
+		text-align: center;
+	}
+
+	&-card {
+		background-repeat: no-repeat;
+		background-position: top right;
+		border: 1px solid $wallpi-border-color;
+		padding: 36px 40px;
+		transition: all 500ms ease;
+		background-color: $wallpi-white;
+
+		&:hover {
+			box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+		}
+
+		@include devices(lg) {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		&__icon {
+
+			i,
+			span {
+				color: $wallpi-base;
+				font-size: 60px;
+			}
+
+			@include devices(lg) {
+				margin-right: 30px;
+			}
+		}
+
+		&__title {
+			margin: 0;
+			text-transform: uppercase;
+			color: $wallpi-black;
+			text-transform: uppercase;
+			font-size: 20px;
+			line-height: 1.5em;
+			font-weight: bold;
+
+			a {
+				color: inherit;
+				@include borderHover;
+			}
+		}
+
+		&__text {
+			font-size: 15px;
+			line-height: 2em;
+			margin: 0;
+
+		}
+
+		&__price {
+			margin: 0;
+			color: $wallpi-base;
+			font-size: 16px;
+			line-height: 1.6666666666666667em;
+			margin-top: 10px;
+
+			@include devices(md) {
+				font-size: 18px;
+			}
+
+			@include devices(lg) {
+				margin-left: 90px;
+			}
+
+			@include devices(xl) {
+				margin-top: 0;
+				margin-left: auto;
+			}
+		}
+	}
+}

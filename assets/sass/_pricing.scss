@@ -1,0 +1,234 @@
+.pricing-one {
+    padding-top: 107px;
+    padding-bottom: 120px;
+    background-color: $wallpi-white;
+    @media (max-width:991px) {
+        padding-top: 52px;
+        padding-bottom: 74px;
+    }
+    .container {
+        @media (max-width:1200px) {
+            max-width: 100%;
+        }
+    }
+    .sec-title {
+        text-align: center;
+        padding-bottom: 62px;
+        &__tagline {
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+        &__title {
+            font-weight: 600;
+            font-size: 60px;
+            line-height: 62px;
+            margin-top: 0;
+            @media (max-width:991px) {
+                font-size: 48px;
+                line-height: 52px;
+            }
+            @media (max-width:767px) {
+                font-size: 32px;
+                line-height: 36px;
+            }
+        }
+    }
+    &__col {
+        border: 1px solid rgba($wallpi-border-color-rgb, 0.05);
+        padding: 24px 15px 43px 15px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &:hover {
+            .pricing-one__iconwrap {
+                background-color: $wallpi-black;
+                &::after {
+                    background-color: $wallpi-base;
+                }
+            }
+            .pricing-one__shapetop,
+            .pricing-one__shapeleft,
+            .pricing-one__shaperight,
+            .pricing-one__shapebtm {
+                background-color: rgba($wallpi-black-rgb,0.18);
+            }
+        }
+    }
+    &__shapetop,
+    &__shapeleft,
+    &__shaperight,
+    &__shapebtm {
+        position: absolute;
+        width: 100%;
+        background-color: rgba($wallpi-text-white2-rgb,0.2);
+        height: 100%;
+        top: 0;
+        transition: all 0.5s ease;
+    }
+    &__shapetop {
+        left: 0;
+        max-height: 100px;
+        -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+    }
+    &__shapeleft {
+        left: 0;
+        transform: rotate(-14deg);
+        top: -33px;
+        max-height: 265px;
+        max-width: 105px;
+        -webkit-clip-path: polygon(0 0, 1% 100%, 100% 50%);
+        clip-path: polygon(0 0, 1% 100%, 100% 50%);
+        @media (max-width:991px) {
+            max-width: 50%;
+            transform: rotate(-6deg);
+            top: -12px;
+        }
+    }
+    &__shaperight {
+        right: 0;
+        transform: rotate(14deg);
+        top: -33px;
+        max-height: 265px;
+        max-width: 105px;
+        -webkit-clip-path: polygon(0 50%, 100% 100%, 100% 0);
+        clip-path: polygon(0 50%, 100% 100%, 100% 0);
+        @media (max-width:991px) {
+            max-width: 50%;
+            transform: rotate(6deg);
+            top: -12px;
+        }
+    }
+    &__shapebtm {
+        left: 0;
+        top: initial;
+        bottom: 0;
+        max-height: 88px;
+        -webkit-clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+        clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    }
+    &__inner {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+    }
+    &__iconwrap {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        border: 1px solid $wallpi-border-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 21px;
+        transition: all 0.5s ease;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 79px;
+            height: 79px;
+            border-radius: 50%;
+            background-color: $wallpi-black;
+            z-index: 1;
+            transition: all 0.5s ease;
+        }
+    }
+    &__icon {
+        position: relative;
+        z-index: 2;
+        font-size: 32px;
+        line-height: 1;
+        color: $wallpi-text-white;
+    }
+    &__cost {
+        padding-bottom: 24px;
+        &__amount {
+            color: $wallpi-text;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 1;
+            text-align: center;
+            display: block;
+            margin-bottom: 12px;
+        }
+        &__name {
+            color: $wallpi-base;
+            font-weight: 600;
+            font-size: $heading-size5;
+            line-height: 1;
+            text-align: center;
+            position: relative;
+            padding-bottom: 27px;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                max-width: 175px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 1px;
+                margin: 0 auto;
+                background-color: rgba($wallpi-border-color-rgb, 0.08);
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 40px;
+        li {
+            color: rgba($wallpi-text-rgb, 0.8);
+            font-size: $body-size;
+            line-height: 1;
+            text-align: center;
+            width: fit-content;
+            position: relative;
+            padding-left: 23px;
+            &::before {
+                font-family: 'icomoon' !important;
+                content: '\e904';
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                color: rgba($wallpi-text-rgb, 1);
+                font-size: 16px;
+            }
+        }
+        li+li {
+            margin-top: 16px;
+        }
+    }
+    .wallpi-btn--plan {
+        font-family: $wallpi-font;
+        color:$wallpi-text-white;
+        height: 44px;
+        width: fit-content;
+        margin: 0 auto;
+        background-color: $wallpi-text-gray2-dark;
+        border-radius: 3px;
+        padding: 15px 34px;
+        &::before {
+            background-color: $wallpi-text-gray2-dark;
+        }
+        &::after {
+            background-color: $wallpi-base;
+        }
+    }
+
+    &--page {
+        padding-top: 120px;
+        @media (max-width:991px) {
+            padding-top: 52px;
+        }
+		.owl-carousel .owl-nav {
+			display: none;
+		}
+	}
+}

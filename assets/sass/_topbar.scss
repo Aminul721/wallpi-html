@@ -1,0 +1,290 @@
+.topbar-one {
+	display: none;
+	background-color: $wallpi-gray;
+	@include devices(md) {
+		display: block;
+	}
+	.container-fluid {
+		max-width: 1810px;
+	}
+	&__inner {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__quick_support {
+		background-color: #c67636;
+		background-image: url('../images/shapes/topbar-bg1-1.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left -70px top;
+		display: flex;
+		align-items: center;
+		padding: 11px 31px 11px 0;
+		position: relative;
+		@media (max-width: 1200px) {
+			padding-right: 15px;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			width: 600%;
+			height: 100%;
+			top: 0;
+			right: 99.5%;
+			z-index: 1;
+			background-color: #c67636;
+			background-image: url('../images/shapes/topbar-bg1-1.jpg');
+			background-repeat: repeat;
+			background-size: contain;
+			background-position: right top;
+		}
+	}
+	&__quick_call {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		font-size: $body-size;
+		line-height: 1;
+		color: $wallpi-white;
+		margin-bottom: 0;
+		& > i {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: $wallpi-black;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $wallpi-white;
+			transition: all 0.5s;
+			font-size: 24px;
+		}
+		& > span {
+			padding-left: 12px;
+			transition: all 0.5s;
+		}
+		& > a {
+			color: $wallpi-white;
+			margin-left: 6px;
+			display: block;
+			@include borderHover;
+		}
+	}
+	&__right {
+		display: flex;
+		align-items: center;
+		@include devices(lg) {
+			margin-top: 0;
+			margin-left: auto;
+		}
+		@media (max-width:991px) {
+			display: none;
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		margin: 0;
+
+		&__item {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			line-height: 1;
+			color: $wallpi-text;
+			padding: 0 21px;
+			@media (max-width: 1200px) {
+				padding: 0 12px;
+			}
+			a {
+				color: inherit;
+				@include borderHover;
+			}
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child { padding-right: 0; }
+		}
+		&__item+&__item {
+			border-left: 1px solid rgba($wallpi-base-rgb,0.6);
+		}
+
+		&__icon {
+			font-size: 27px;
+			color: $wallpi-base;
+			left: 1px;
+			position: relative;
+			top: 0;
+			margin-right: 11px;
+			&--size { font-size: 21px;}
+			@media (max-width: 1200px) {
+				margin-right: 9px;
+			}
+		}
+	}
+	&__social {
+		display: flex;
+		align-items: center;
+		padding: 5px 0;
+		padding-left: 28px;
+		line-height: 1em;
+		@media (max-width: 1200px) {
+			padding-left: 16px;
+		}
+		@media (max-width: 1023px) {
+			display: none;
+		}
+		a {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 14px;
+			line-height: 1;
+			color: #d3d0cd;
+			transition: all 500ms ease;
+			background-color: $wallpi-black;
+			+a {
+				margin-left: 10px;
+				@media (max-width: 1200px) {
+					margin-left: 8px;
+				}
+			}
+			& > i {
+				transition: all 0.5s ease;
+			}
+			&:hover {
+				background-color: $wallpi-base;
+				color: $wallpi-white;
+				& > i  {
+					transform: rotateX(-360deg);
+				}
+			}
+		}
+	}
+
+	// topbar--two scss
+	&--two {
+		background-color: $wallpi-black;
+		.topbar-one__info {
+			@media (max-width:991px) {
+				display: none;
+			}
+		}
+		.topbar-one__info__icon,
+		.topbar-one__info__item { color: $wallpi-text-white2; }
+		.topbar-one__info__item {
+			padding: 0 35px;
+			@media (max-width: 1200px) {
+				padding: 0 12px;
+			}
+			&:first-child { padding-left: 0; }
+			&:last-child { padding-right: 0; }
+		}
+		.topbar-one__info__item + .topbar-one__info__item { border-left-color: $wallpi-text-white2;	}
+		.topbar-one__right {
+			@media (max-width:991px) {
+				display: block;
+			}
+		}
+		.topbar-one__quick_support {
+			background-image: none;
+			background-color: transparent;
+			padding-right: 0;
+		}
+		.topbar-one__quick_support::before { content: none; }
+		.topbar-one__quick_call,
+		.topbar-one__quick_call > a,
+		.topbar-one__quick_call > i { color: $wallpi-text-white2; }
+		.topbar-one__quick_call > i { background-color: #363433; }
+		.topbar-one__quick_call:hover {
+			& > span,
+			& > a { color: $wallpi-base; }
+			& > i {
+				color: $wallpi-text-white;
+				background-color: $wallpi-base;
+			}
+		}
+
+		.topbar-one__social { padding-left: 35px; }
+		.topbar-one__social a {
+			background-color: #454341;
+			&:hover {
+				background-color: $wallpi-base;
+			}
+		}
+	}
+
+	// topbar--three scss
+	&--three {
+		background-color: $wallpi-white;
+		border-bottom: 1px solid #e1dddd;
+		.topbar-one__info {
+			@media (max-width:1200px) {
+				display: none;
+			}
+		}
+		.topbar-one__info__item {
+			@media (max-width:1366px) {
+				padding: 0 10px;
+				&:first-child { padding-left: 0;}
+				&:last-child { padding-right: 0; }
+			}
+		}
+		.topbar-one__info__item + .topbar-one__info__item { border: 0; }
+		.topbar-one__social {
+			padding-right: 26px;
+			padding-left: 0;
+			@media (max-width:1300px) {
+				display: none;
+			}
+		}
+		.topbar-one__quick_support {
+			background-color: #faf6f4;
+			background-image: url('../images/shapes/topbar-bg3-1.jpg');
+			background-position: right -72px top;
+			padding-right: 0;
+			padding-left: 16px;
+			&::before {
+				left: 87%;
+				right: initial;
+				background-color: #faf6f4;
+				background-image: url('../images/shapes/topbar-bg3-1.jpg');
+				background-position: left top;
+			}
+			&:hover {
+				.topbar-one__quick_call {
+					color: $wallpi-base;
+					& > span {
+						color: $wallpi-base;	
+					}
+					& > a {
+						color: $wallpi-base;
+					}
+					& > i {
+						background-color: $wallpi-base;
+						color: $wallpi-text-white;	
+					}
+		
+				}
+			}
+		}
+		.topbar-one__quick_call {
+			color: $wallpi-text;
+			& > a {
+				color: $wallpi-text;
+			}
+			& > i {
+				background-color: $wallpi-white;
+				color: $wallpi-text;	
+			}
+
+		}
+	}
+}

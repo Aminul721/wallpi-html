@@ -1,0 +1,205 @@
+.comments-one {
+	margin-top: 0;
+	padding-left: 24px;
+	padding-right: 24px;
+	&__bg {
+		background-color: $wallpi-white;
+		border: 1px solid rgba($wallpi-text-dark2-white-rgb,0.4);
+		border-top: 0;
+		padding: 35px 30px 0 35px;
+			@media (max-width: 991px) {
+				padding: 24px;
+				padding-bottom: 0;
+			}
+		}
+
+	&__title {
+		margin: 0;
+		color: rgba($wallpi-text-rgb, 0.9);
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 1;
+		@include devices(lg) {
+			font-size: 24px;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		margin-top: 40px;
+	}
+
+	&__card {
+		&:not(:first-of-type) {
+			padding-top: 40px;
+		}
+
+		&__wrap {
+			width: 100%;
+			border-bottom: 1px solid rgba($wallpi-text-dark2-white-rgb,0.4);
+			padding-bottom: 40px;
+			margin-bottom: 38px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			@media (max-width: 991px) {
+				padding-bottom: 25px;
+				margin-bottom: 25px;
+			}
+		}
+		&__image {
+			width: 103px;
+			height: 103px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-right: 12px;
+			@include devices(md) {
+				margin-right: 17px;
+			}
+			@include devices(xl) {
+				margin-right: 26px;
+			}
+
+			img {
+				border-radius: 50% !important;
+				width: 100% !important;
+			}
+		}
+
+		&__title-wrap {
+			display: flex;
+			align-items: center;
+			margin-bottom: 6px;
+		}
+		&__title {
+			margin: 0;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 1;
+			color: rgba($wallpi-text-rgb, 0.9);
+		}
+		&__text {
+			margin: 0;
+			font-size: $body-size;
+			line-height: 32px;
+			margin-bottom: 19px;
+			color: rgba($wallpi-text-rgb,0.7);
+			margin-bottom: 6px;
+		}
+		&__reply {
+			padding: 5px 12px;
+			font-size: 13px;
+			line-height: 1;
+			font-weight: 500;
+			background-color: rgba($wallpi-text-gray2-dark-rgb, 0.1);
+			color: rgba($wallpi-text-rgb, 0.9);
+			margin-left: 11px;
+			&:hover {
+				background-color: $wallpi-base;
+				color: $wallpi-white;
+			}
+			&::after,
+			&::before {
+				content: none;
+			}
+		}
+
+		&__content {
+			position: relative;
+			width: calc(calc(100% - 115px) / 1);
+			@include devices(md) {
+				width: calc(calc(100% - 120px) / 1);
+			}
+			@include devices(xl) {
+				width: calc(calc(100% - 129px) / 1);
+			}
+			@media (max-width: 767px) {
+				width: 100%;
+				padding-top: 25px;	
+			}
+		}	
+
+		&__date {
+			font-size: 14px;
+			line-height: 1;
+			font-weight: 400;
+			color: rgba($wallpi-text-rgb,0.7);
+		}
+
+		&--wrap_inner {
+			@extend .comments-one__card__wrap;
+			&:last-child{
+				margin-bottom: 0;
+				padding-bottom: 30px;
+			}
+		}
+	}
+	&__list--inner {
+		margin-top: 0;
+		padding-left: 80px;
+		list-style: none;
+		@media (max-width: 991px) {
+			padding-left: 25px;
+		}
+	}
+}
+
+.comments-form {
+	margin-top: 40px;
+	padding: 0 24px;
+
+	@include devices(xl) {
+		margin-top: 55px;
+	}
+
+	&__title {
+		margin: 0;
+		color: rgba($wallpi-text-rgb, 0.9);
+		font-size: 20px;
+		line-height: 1;
+		font-weight: 600;
+		margin-top: -4px;
+		margin-bottom: -4px;
+
+		@include devices(lg) {
+			font-size: 24px;
+		}
+	}
+
+	&__form {
+		margin-top: 32px;
+		margin-bottom: 46px;
+		.bootstrap-select > .dropdown-toggle,
+		input[type=text],
+		input[type=email],
+		textarea {
+			height: 70px;
+			border: 1px solid rgba($wallpi-text-rgb,0.4);
+			background-color: transparent;
+			font-size: 15px;
+			font-weight: 400;
+			color: rgba($wallpi-text-rgb,0.5);
+			&:is(:active,:focus,:hover) {
+				background-color: $wallpi-white;
+			}
+		}
+		textarea {
+			resize: initial;
+			height: 218px;
+		}
+		.wallpi-btn {
+			font-family: $wallpi-heading-font;
+			font-weight: 500;
+			font-size: 15px;
+			height: 54px;
+			padding: 8px 32px;
+			background-color: $wallpi-black2;
+			&::before {
+				background-color: $wallpi-black2;
+			}
+			&::after {
+				background-color: $wallpi-base;
+			}
+		}
+	}
+}

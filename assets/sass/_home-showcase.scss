@@ -1,0 +1,137 @@
+.demo-one {
+	padding-top: 120px;
+	padding-bottom: 120px;
+
+	.row {
+		--bs-gutter-y: 30px;
+	}
+
+	&__card {
+		background-color: $wallpi-white;
+		box-shadow: 0px 10px 60px 0px rgba($wallpi-black3-rgb, 0.1);
+		text-align: center;
+		transition: 500ms ease;
+		transform: translateY(0px);
+
+		&:hover {
+			transform: translateY(-10px);
+		}
+	}
+
+	&__title {
+		margin: 0;
+		font-size: 16px;
+		color: $wallpi-black;
+		font-weight: 500;
+		font-family: $wallpi-font;
+
+		a {
+			color: inherit;
+			@include borderHover;
+		}
+	}
+
+	&__image {
+		position: relative;
+		overflow: hidden;
+
+		img {
+			max-width: 100%;
+			transition: filter 500ms ease;
+			filter: blur(0px);
+		}
+	}
+
+	&__card:hover &__image {
+		img {
+			filter: blur(2px);
+		}
+	}
+
+	&__btns {
+		background-color: rgba($wallpi-black-rgb, 0.3);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		transform: scale(1, 0);
+		transition: transform 500ms ease, opacity 600ms linear;
+		transform-origin: bottom center;
+		opacity: 0;
+	}
+
+	&__card:hover &__btns {
+		transform: scale(1, 1);
+		opacity: 1;
+		transform-origin: top center;
+	}
+
+	&__btn {
+		font-size: 14px;
+		padding: 7px 25px;
+		height: 45px;
+
+		&::before {
+			background-color: $wallpi-base;
+		}
+
+		&::after {
+			background-color: $wallpi-black;
+		}
+
+		&:hover {
+			color: $wallpi-white;
+		}
+
+		@include devices(md) {
+			display: inline-flex;
+		}
+	}
+
+	&__title {
+		padding-top: 20.5px;
+		padding-bottom: 20.5px;
+	}
+}
+
+.home-showcase {
+	margin-top: -1px;
+	margin-bottom: -20px;
+
+	.row {
+		--bs-gutter-x: 42px;
+		--bs-gutter-y: 20px;
+	}
+
+	&__inner {
+		padding: 40px 40px 21px;
+		background-color: $wallpi-white;
+		box-shadow: 0px 10px 60px 0px rgba($wallpi-black3-rgb, 0.07);
+	}
+
+	.demo-one__card {
+		box-shadow: none;
+	}
+
+	.demo-one__btns {
+		flex-direction: column;
+	}
+
+	.demo-one__btn {
+		min-width: 135px;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.demo-one__title {
+		padding: 0;
+		text-transform: initial;
+		margin-top: 15px;
+		padding-bottom: 15px;
+	}
+}

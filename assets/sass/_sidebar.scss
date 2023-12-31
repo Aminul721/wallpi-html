@@ -1,0 +1,439 @@
+.sidebar {
+	&__single {
+		background-color: rgba($wallpi-lightpink2-rgb,0.7);
+		padding: 36px 44px;
+		@media (max-width:1200px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		@media (max-width:991px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		&--listsingle {
+			background-color: $wallpi-base;
+			background-blend-mode: overlay;
+			position: relative;
+			padding-top: 31px;
+			padding-bottom: 50px;
+			&::after {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				background-image: url('../images/resources/services-details-sidebar1-1.jpg');
+				opacity: 0.1;
+				background-repeat: no-repeat;
+				background-position: center top;
+				background-size: cover;
+			}
+		}
+		&--latestpost {
+			padding-top: 31px;
+			padding-bottom: 22px;
+			padding-right: 24px;
+		}
+
+		&--tags {
+			padding-top: 31px;
+			padding-bottom: 43px;
+		}
+
+		&--contactsingle {
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: cover;
+			background-color: #eae2de;
+			background-blend-mode: overlay;
+			padding-top: 52px;
+			padding-bottom: 52px;
+		}
+	}
+
+	&__single+&__single {
+		margin-top: 40px;
+	}
+
+	.service-sidebar__title,
+	&__title {
+		padding: 0;
+		margin: 0;
+		color: $wallpi-text;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 29px;
+		margin-bottom: 26px;
+		
+		@include devices(md) {
+			font-size: 20px;
+			line-height: 32px;
+		}
+	}
+	.service-sidebar__title {
+		color: $wallpi-text-white;
+	}
+	.service-sidebar__nav { padding: 0; }
+
+	&__search {
+		position: relative;
+		input[type="search"],
+		input[type="text"] {
+			outline: none;
+			width: 100%;
+			height: 56px;
+			background-color: $wallpi-white;
+			color: rgba($wallpi-text-rgb,0.5);
+			font-weight: 500;
+			font-family: $wallpi-font;
+			font-size: 14px;
+			border: 1px solid rgba($wallpi-text-dark2-white-rgb,0.4);
+			padding-left: 20px;
+			padding-right: 65px;
+			transition: all 500ms ease;
+			&:focus {
+				box-shadow: 0px 2px 10px 0px rgba($wallpi-black-rgb, 0.1);
+
+			}
+		}
+
+		button[type="submit"] {
+			border: none;
+			outline: none;
+			background-color: $wallpi-black;
+			position: absolute;
+			top: 1px;
+			right: 1px;
+			width: 60px;
+			font-size: 16px;
+			color: $wallpi-base;
+			height: calc(calc(100% - 2px));
+			border-left: 1px solid rgba($wallpi-text-dark2-white-rgb,0.4);
+			transition: all 0.5s ease;
+			&:hover {
+				background-color: $wallpi-base;
+				color: $wallpi-text-white;
+			}
+		}
+	}
+
+	&__posts {
+		margin-bottom: 0;
+
+		&__item {
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid rgba($wallpi-text-dark2-white-rgb,0.4);
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+
+		&__image {
+			width: 57px;
+			min-width: 57px;
+			height: 57px;
+			border-radius: 50%;
+			margin-right: 18px;
+			img {
+				width: 100% !important;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 50% !important;
+			}
+		}
+
+		&__title {
+			margin: 0;
+			color: $wallpi-black;
+			font-family: $wallpi-font;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 28px;
+
+			a {
+				color: inherit;
+				@include borderHover;
+			}
+		}
+	}
+
+	&__tags {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px;
+
+		a {
+			background-color: $wallpi-lightpink;
+			color: $wallpi-text;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 1;
+			transition: all 500ms ease;
+			display: inline-flex;
+			padding: 7.5px 14.5px;
+
+			&:hover {
+				color: $wallpi-white;
+				background-color: $wallpi-base;
+			}
+		}
+	}
+}
+
+
+.service-sidebar {
+	&__single {
+		&--listsingle {
+			background-color: $wallpi-base;
+			background-blend-mode: overlay;
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 1;
+
+				background-image: url('../images/resources/services-details-sidebar1-1.jpg');
+				opacity: 0.10;
+				background-repeat: no-repeat;
+				background-position: center top;
+				background-size: cover;
+			}
+		}
+		&__inner {
+			position: relative;
+			z-index: 2;
+		}
+	}
+	&__single+&__single {
+		margin-top: 40px;
+	}
+	&__title {
+		margin: 0;
+		font-weight: 500;
+		color: $wallpi-white;
+		font-size: 18px;
+		line-height: 29px;
+		padding: 43px;
+		padding-bottom: 22px;
+		padding-top: 30px;
+		@media (max-width:1200px) {
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-top: 20px;
+		}
+
+		@include devices(md) {
+			font-size: 20px;
+			line-height: 32px;
+		}
+	}
+
+	&__nav {
+		margin-bottom: 0;
+		padding: 43px;
+		padding-top: 0;
+		@media (max-width:1200px) {
+			padding: 30px;
+			padding-top: 0;
+		}
+		@media (max-width:991px) {
+			padding: 15px;
+			padding-top: 0;
+			padding-bottom: 20px;
+		}
+
+		li {
+			background-color: $wallpi-white;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 14px 0 20px;
+			transition: all 500ms ease;
+			position: relative;
+			@media (max-width:991px) {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+			&::after {
+				position: absolute;
+				content: '';
+				width: 0;
+				height: 100%;
+				left: 0;
+				top: 0;
+				z-index: 1;
+				background-color: $wallpi-black;
+				transition: all 500ms ease;
+			}
+			a {
+				position: relative;
+				z-index: 2;
+				color: $wallpi-text;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 1;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				transition: all 500ms ease;
+				width: 100%;
+				padding: 14px 0;
+
+				@include devices(lg) {
+					font-size: 17px;
+				}
+			}
+			& i {
+				position: relative;
+				z-index: 2;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: $wallpi-base;
+				color: $wallpi-text;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 10px;
+				transition: all 600ms ease;
+			}
+
+			&.current,
+			&:hover {
+				&::after {
+					background-color: $wallpi-black;
+					width: 100%;
+				}
+				a {
+					color: $wallpi-text-white;
+				}
+				i {
+					background-color: $wallpi-white;
+				}
+				color: $wallpi-text-white;
+			}
+		}
+		li+li {
+			margin-top: 4px;
+		}
+	}
+
+	&__single {
+		&--contactsingle {
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-size: cover;
+			padding: 43px;
+			padding-top: 52px;
+			padding-bottom: 42px;
+			background-color: #eae2de;
+			background-blend-mode: overlay;
+			@media (max-width:1200px) {
+				padding: 30px;
+			}
+			@media (max-width:991px) {
+				padding: 20px;
+			}
+		}
+	}
+	&__contactwrap {
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			bottom: 0;
+			z-index: 1;
+			background-image: url('../images/shapes/services-sidebar-shape1-1.png');
+			background-repeat: repeat-x;
+			background-position: left bottom;
+		}
+	}
+	&__contactimg {
+		width: 100% !important;
+	}
+	&__contact {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		margin: 0 auto;
+		padding: 0 33px;
+		padding-bottom: 39px;
+		@media (max-width:991px) {
+			padding: 0 20px;
+			padding-bottom: 25px;
+		}
+		&__title {
+			margin: 0;
+			color: $wallpi-white;
+			font-size: 18px;
+			line-height: 28px;
+			margin-bottom: 38px;
+			@media (max-width:991px) {
+				margin-bottom: 25px;
+			}
+
+			@include devices(lg) {
+				font-size: 22px;
+				line-height: 34px;
+			}
+		}
+
+		&__number {
+			background-color: $wallpi-white;
+			color: $wallpi-text;
+			font-size: 18px;
+			line-height: 1;
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			border-radius: 3px;
+			margin-bottom: 0;
+			padding: 8px 0;
+			padding-left: 20px;
+			padding-right: 15px;
+			i {
+				width: 32px;
+				min-width: 32px;
+				height: 32px;
+				border: 1px solid $wallpi-border-color;
+				background-color: $wallpi-base;
+				border-radius: 50%;
+				color: $wallpi-white;
+				font-size: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: all 0.5s ease;
+			}
+
+			a {
+				color: inherit;
+				font-size: inherit;
+				@include borderHover;
+				display: inline-block;
+				margin-left: 12px;
+			}
+			&:hover {
+				i {
+					background-color: $wallpi-black;
+					color: $wallpi-text-white;
+				}
+			}
+		}
+	}
+}

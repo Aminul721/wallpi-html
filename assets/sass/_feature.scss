@@ -1,0 +1,239 @@
+.feature-one {
+    position: relative;
+    z-index: 2;
+    background-color: $wallpi-white;
+    padding: 120px 0 108px;
+    @media (max-width: 991px) {
+        padding-top: 65px;
+        padding-bottom: 52px;
+    }
+    .container {
+        @media (max-width: 1200px) {
+            max-width: 100%;
+        }
+    }
+    &__row {
+        @media (max-width: 991px) {
+            gap: 25px 0;
+        }
+    }
+    &__col {
+        padding: 0 44px;
+        &:first-child {
+            padding-left: 15px;
+        }
+        &:last-child {
+            padding-right: 15px;
+        }
+        @media (max-width: 1200px) {
+            padding: 0 25px;
+        }
+        @media (max-width: 991px) {
+            padding: 0 15px;
+        }
+    }
+    &__item {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        padding-left: 98px;
+        @media (max-width: 767px) {
+            padding-left: 0;
+            padding-top: 70px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 98px;
+            z-index: 1;
+            background-color: rgba(73,73,73,0.55);
+            @media (max-width: 767px) {
+                top: 70px;
+                left: 0;
+            }
+        }
+        &__img {
+            width: 100%;
+            img {
+                width: 100% !important;
+                max-height: 248px;
+                min-height: 248px;
+                object-fit: cover;
+                object-position: center top;
+                @media (max-width: 767px) {
+                    max-height: 348px;
+                    min-height: 348px;
+                }
+            }
+        }
+        &__wrap {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            z-index: 2;
+            align-items: center;
+            @media (max-width: 767px) {
+                align-items: flex-start;
+                bottom: initial;
+            }
+        }
+        &__circle_img {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            @media (max-width: 767px) {
+                margin: 0 auto;
+            }
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: calc(100% + 0px);
+                height: calc(100% + 20px);
+                left: 0;
+                top: -10px;
+                z-index: 1;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            &::before {
+                background-image: url('../images/shapes/feature-shape1-1.png');
+                background-position: center top;
+            }
+            &::after {
+                background-image: url('../images/shapes/feature-shape1-2.png');
+                background-position: center bottom;
+            }
+            img {
+                width: 100% !important;
+                border-radius: 50% !important;
+                height: 100%;
+                object-fit: cover;
+                position: relative;
+                z-index: 2;
+            }
+        }
+        &__info {
+            width: calc(calc(100% - 200px) / 1);
+            padding-left: 35px;
+            padding-right: 14px;
+            margin-top: -15px;
+            @media (max-width: 1200px) {
+                padding-left: 28px;
+            }
+            @media (max-width: 767px) {
+                width: calc(calc(100% - 0px) / 1);
+                padding-top: 35px;
+                margin-top: 0;
+            }
+            &__title {
+                color: $wallpi-white;
+                font-family: $wallpi-font;
+                font-weight: 600;
+                font-size: $heading-size4;
+                line-height: 1;
+                margin-bottom: 10px;
+            }
+            &__text {
+                color: rgba($wallpi-white-rgb, 0.8);
+                font-size: $body-size;
+                line-height: 30px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// feature-two css
+.feature-two {
+    margin-bottom: -174px;
+    position: relative;
+    z-index: 2;
+    .container {
+        @media (max-width: 1200px) {
+            max-width: 100%;
+        }
+    }
+    .row {
+        @media (max-width: 991px) {
+            gap: 35px 0;
+        }
+    }
+    &__innercol {
+        background-image: url('../images/backgrounds/feature-bg2-1.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-color: #edeae8;
+        background-blend-mode: overlay;
+        border-radius: 9px;
+        border: 1px solid transparent;
+        transition: all 0.5s ease;
+        height: 100%;
+        padding: 44px 42px;
+        &:hover {
+            border-color: $wallpi-base;
+            .feature-two__icon {
+                border-color: $wallpi-base;
+                background-color: $wallpi-white;
+                & > i {
+                    transform: scale(0.9);
+                    color: $wallpi-base;
+                }
+            }
+        }
+    }
+    &__icon {
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        border: 1px solid $wallpi-text;
+        background-color: $wallpi-base;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        transition: all 0.5s ease;
+        & > i {
+            font-size: 55px;
+            line-height: 1;
+            color: $wallpi-text-white;
+            transition: all 0.5s ease;
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: $heading-size4;
+        line-height: 41px;
+        margin-bottom: 10px;
+    }
+    &__text {
+        color: $wallpi-text-dark;
+        font-size: $body-size;
+        line-height: 32px;
+        margin-bottom: 0;
+    }
+
+    &--page {
+        margin-bottom: 0;
+        padding-bottom: 120px;
+        @media (max-width: 991px) {
+            padding-bottom: 72px;
+        }
+    }
+    &--aboutpage {
+        margin-bottom: 0;
+        padding-bottom: 108px;
+        @media (max-width: 991px) {
+            padding-bottom: 62px;
+        }
+    }
+}

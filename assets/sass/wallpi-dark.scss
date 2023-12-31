@@ -1,0 +1,45 @@
+:root {
+    // --wallpi-text: #6e6b70;
+    // --wallpi-text-rgb: 110, 107, 112;
+    // --wallpi-white: #2a2826;
+    // --wallpi-white-rgb: 42, 40, 38;
+    // --wallpi-base: #d18548;
+    // --wallpi-base-rgb: 194, 167, 78;
+    // --wallpi-black: #fff;
+    // --wallpi-black-rgb: 255, 255, 255;
+    // --wallpi-black3: #000;
+    // --wallpi-black3-rgb: 0, 0, 0;
+    // --wallpi-black4: #121013;
+    // --wallpi-black4-rgb: 18, 16, 19;
+    // --wallpi-gray: #1c1a1d;
+    // --wallpi-gray-rgb: 28, 26, 29;
+    --wallpi-border-color: #2f2d30;
+    --wallpi-border-color-rgb: 47, 45, 48;
+
+
+    --wallpi-text: #2a2826;
+	// --wallpi-text-rgb: #{toRGB(#2a2826)};
+	--wallpi-text-white: #fff;
+	// --wallpi-text-white-rgb: #{toRGB(#fff)};
+	--wallpi-text-white2: #d3d0cd;
+	// --wallpi-text-white2-rgb: #{toRGB(#d3d0cd)};
+	--wallpi-text-dark2-white: #bdbdbc;
+	// --wallpi-text-dark2-white-rgb: #{toRGB(#bdbdbc)};
+
+
+    --wallpi-base: #d18548;
+	// --wallpi-base-rgb: #{toRGB(#d18548)};
+	--wallpi-gray: #f9f6f1;
+	// --wallpi-gray-rgb: #{toRGB(#f9f6f1)};
+	--wallpi-white: #000;
+	// --wallpi-white-rgb: #{toRGB(#fff)};
+	--wallpi-black: #fff;
+	// --wallpi-black-rgb: #{toRGB(#2a2826)};
+	--wallpi-black2: #f9f6f1;
+	// --wallpi-black2-rgb: #{toRGB(#4a3626)};
+	--wallpi-black3: #d3d0cd;
+	// --wallpi-black3-rgb: #{toRGB(#000)};
+
+	--wallpi-black4: #d3d0cd;
+    --wallpi-gray: #716a63;
+}

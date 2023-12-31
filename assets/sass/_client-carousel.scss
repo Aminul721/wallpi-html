@@ -1,0 +1,120 @@
+.client-carousel {
+  background-color: $wallpi-base;
+  background-image: url(../images/shapes/client-carousel-bg-1-1.jpg);
+  background-size: cover;
+  padding: 80px 0;
+
+  @include devices(lg) {
+    padding: 102px 0;
+  }
+
+  &__one {
+
+    &__item {
+
+      img {
+        opacity: 0.2;
+        transition: all 500ms ease;
+        max-width: 100%;
+        width: auto !important;
+      }
+
+      &:hover {
+        img {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+
+.client-carousel-one {
+  position: relative;
+  background: $wallpi-white;
+  padding: 0 0 60px;
+
+  .client-carousel__one {
+    padding: 74px 0 0;
+  }
+
+  .owl-theme .owl-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    z-index: 2;
+    line-height: .8;
+
+    button {
+      width: 26px;
+      height: 27px;
+      background-color: $wallpi-gray;
+      margin: 0 2.5px;
+      padding: 0;
+      transition: all 500ms ease;
+      font-size: 12px;
+      color: $wallpi-black;
+      text-align: center;
+      font-size: 12px;
+      line-height: 27px;
+      border-radius: 0;
+
+      &:hover {
+        background-color: $wallpi-base;
+        color: $wallpi-white;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      content: '';
+      height: 1px;
+      background-color: $wallpi-border-color;
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: -1;
+      width: 110px;
+      content: '';
+      height: 1px;
+      background-color: $wallpi-white;
+    }
+  }
+
+  .client-carousel__one__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 103px;
+    transition: all 500ms ease;
+
+    img {
+      transition: all 500ms ease;
+      opacity: 0.2;
+      max-width: 100%;
+      width: auto;
+    }
+
+    &:hover {
+      background-color: #f8f5f0;
+
+      img {
+        opacity: 0.6;
+      }
+    }
+  }
+}

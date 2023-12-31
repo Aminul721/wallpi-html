@@ -1,0 +1,114 @@
+.opening {
+    position: relative;
+    margin-bottom: -85px;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 0;
+    }
+
+    &--home-three {
+        margin-bottom: 0;
+        padding-bottom: 120px;
+
+        @media (max-width: 767px) {
+            padding-bottom: 80px;
+        }
+    }
+
+    &__wrapper {
+        background-color: $wallpi-base;
+        position: relative;
+        z-index: 2;
+        padding: 39px 0;
+
+        @media (max-width: 767px) {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 180px;
+            height: 100%;
+            content: '';
+            opacity: 0.102;
+            background-image: linear-gradient(90deg, rgba($wallpi-black-rgb, 0) 0%, rgba($wallpi-black-rgb, 0.9999999999999999) 100%);
+
+            @media (max-width: 991px) {
+                display: none;
+            }
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                width: 155px;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: 65px;
+        color: $wallpi-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 0 0;
+        margin-right: -10px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        color: $wallpi-white;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 700;
+        margin: 27px -30px 0 33px;
+        position: relative;
+
+        @media (max-width: 767px) {
+            margin: 20px 0 0;
+        }
+    }
+
+    &__info {
+        font-size: 12px;
+        line-height: 30px;
+        color: $wallpi-white;
+        text-transform: uppercase;
+        padding: 12px 0 20px;
+        margin: 0 0 0 -14px;
+
+        @media (max-width: 991px) {
+            margin: 0 0 0;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            margin: 0 0 0;
+        }
+
+        &--last {
+            margin-left: -45px;
+            padding-left: 60px;
+            border-left: 1px solid rgba($wallpi-white-rgb, .2);
+
+            @media (max-width: 991px) {
+                margin: 0 0 0;
+                padding: 0;
+                border: none;
+            }
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                margin-left: -30px;
+                padding-left: 20px;
+            }
+        }
+
+        &__text {
+            display: block;
+            font-size: 20px;
+            text-transform: none;
+        }
+    }
+}

@@ -1,0 +1,431 @@
+.checkout-page {
+	position: relative;
+	background-color: $wallpi-white;
+	padding: 117px 0;
+	padding-bottom: 88px;
+	@media (max-width: 991px) {
+		padding: 68px 0;
+		padding-top: 55px;
+	}
+	.container {
+		@media (max-width: 1200px) {
+			max-width: 100%;
+		}
+	}
+	.bs-gutter-x-20 {
+		--bs-gutter-x: 20px;
+	}
+
+	&__billing-address {
+		position: relative;
+		&__title {
+			color: $wallpi-text;
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 1;
+			margin: 0 0 30px;
+			padding-bottom: 13px;
+			border-bottom: 1px solid rgba($wallpi-text-dark2-white-rgb, 0.4);
+			@media (max-width: 767px) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	&__label-text {
+		font-size: $body-size;
+		line-height: 1;
+		color: $wallpi-text;
+		font-weight: 400;
+		margin-bottom: 19px;
+		display: block;
+	}
+	&__input-box {
+		position: relative;
+		line-height: 1;
+		margin: 0 0 30px;
+		
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"] {
+			height: 60px;
+			width: 100%;
+			border: none;
+			background-color: $wallpi-white;
+			border: 1px solid rgba($wallpi-text-dark2-white-rgb, 0.4);
+			padding-left: 20px;
+			padding-right: 20px;
+			outline: none;
+			font-size: 15px;
+			color: rgba($wallpi-text-rgb, 0.5);
+			font-family: $wallpi-font;
+			display: block;
+			font-weight: 400;
+			border-radius: 4px;
+		}
+
+		.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+			position: relative;
+			display: block;
+			width: 100% !important;
+			font-family: $wallpi-font;
+		}
+
+		.bootstrap-select>.dropdown-toggle::after {
+			display: none;
+		}
+
+		.bootstrap-select>.dropdown-toggle {
+			position: relative;
+			height: 58px;
+			outline: none !important;
+			border-radius: 0;
+			border: 0;
+			background-color: $wallpi-white !important;
+			border: 1px solid rgba($wallpi-text-dark2-white-rgb, 0.4);
+			margin: 0;
+			padding: 0;
+			padding-left: 20px;
+			padding-right: 20px;
+			color: rgba($wallpi-text-rgb, 0.5) !important;
+			font-size: 15px;
+			line-height: 56px;
+			font-weight: 400;
+			box-shadow: none !important;
+			background-repeat: no-repeat;
+			background-size: 14px 12px;
+			background-position: right 25.75px center;
+		}
+
+		.bootstrap-select>.dropdown-toggle:before {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 30px;
+			font-family: "Font Awesome 5 Free";
+			content: "\f107";
+			font-weight: 900;
+			font-size: 14px;
+			color: $wallpi-text;
+		}
+
+		.bootstrap-select .dropdown-menu>li+li>a {
+			border-top: 1px solid $wallpi-border-color;
+		}
+
+		.bootstrap-select .dropdown-menu {
+			border: none;
+		}
+
+		.bootstrap-select .dropdown-menu>li>a {
+			font-size: 15px;
+			font-weight: 400;
+			padding: 15px 20px;
+			color: $wallpi-text3;
+			background-color: $wallpi-base;
+			-webkit-transition: all 0.4s ease;
+			transition: all 0.4s ease;
+		}
+
+		.bootstrap-select .dropdown-menu>li:hover>a,
+		.bootstrap-select .dropdown-menu>li.selected>a {
+			background: $wallpi-base;
+			color: $wallpi-white;
+			border-color: $wallpi-base;
+		}
+
+		textarea {
+			font-size: 15px;
+			font-weight: 400;
+			color: rgba($wallpi-text-rgb,0.5);
+			height: 120px;
+			width: 100%;
+			background-color: $wallpi-white;
+			font-family: $wallpi-font;
+			padding: 20px 20px 30px 20px;
+			border: none;
+			outline: none;
+			border: 1px solid rgba($wallpi-text-dark2-white-rgb, 0.4);
+			resize: none;
+			border-radius: 18px;
+			margin-bottom: 0px;
+		}
+		&--ordernotes {
+			margin-top: 22px;
+			.checkout-page__label-text {
+				font-family: $wallpi-heading-font;
+				font-weight: 600;
+				font-size: 18px;
+			}
+			textarea {
+				color: rgba($wallpi-text-rgb,0.5);
+			}
+		}
+	}
+
+	&__check-box {
+		position: relative;
+		display: block;
+		margin-top: -5px;
+		margin-bottom: 10px;
+		input[type="checkbox"] {
+			display: none;
+		}
+		label {
+			position: relative;
+			display: block;
+			padding-left: 30px;
+			margin-right: 0px;
+			margin-bottom: 0;
+			color: $wallpi-text;
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 24px;
+			text-transform: none;
+			cursor: pointer;
+			span:before {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				line-height: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $wallpi-base;
+				font-family: "Font Awesome 5 Free";
+				content: "\f00c";
+				font-size: 10px;
+				font-weight: 900;
+				-webkit-transition: all 0.15s ease-in-out;
+				transition: all 0.15s ease-in-out;
+				opacity: 0;
+			}
+		}
+		input[type="checkbox"]+label span {
+			position: absolute;
+			top: 4px;
+			left: 0;
+			width: 16px;
+			height: 16px;
+			background-color: $wallpi-white;
+			border: 1px solid rgba($wallpi-text-dark2-white-rgb, 0.4);
+			vertical-align: middle;
+			cursor: pointer;
+			-webkit-transition: all 300ms ease;
+			-moz-transition: all 300ms ease;
+			-ms-transition: all 300ms ease;
+			-o-transition: all 300ms ease;
+			transition: all 300ms ease;
+		}
+		input[type="checkbox"]:checked+label span:before {
+			opacity: 1;
+		}
+	}
+
+	//cart-process-wrap
+	&__cost-process {
+		padding-left: 43px;
+		padding-top: 7px;
+		@media (max-width: 1200px) {
+			padding-left: 0;
+		}
+	}
+	&__cost-process-title {
+		font-family: $wallpi-heading-font;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1;
+		color: $wallpi-text;
+		border-bottom: 1px solid rgba($wallpi-text-dark2-white-rgb, 0.4);
+		margin-bottom: 0;
+		padding-bottom: 18px;
+	}
+	.cart-process-wrap {
+		border: 1px solid $wallpi-text;
+		background-color: rgba($wallpi-lightpink2-rgb,0.4);
+		padding: 30.5px 19.5px 10px 19.5px;
+		&.cart-process-wrap + .cart-process-wrap {
+			margin-top: 26px;
+		}
+	}
+	.cart-page__common {
+		border-color: rgba($wallpi-text-dark2-white-rgb,0.4);
+		padding: 24px 0;
+		margin-bottom: 0;
+		position: relative;
+		&:nth-last-child(-n+2) {
+			border-bottom: 1px solid rgba($wallpi-text-dark2-white-rgb,0.4);
+		}
+		&:nth-last-child(-n+1) {
+			border: 0;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			width: calc(calc(100% + 39px));
+			height: calc(calc(100% + 2px));
+			top: -1px;
+			left: -19.5px;
+			z-index: 1;
+			background-color: $wallpi-white;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.5s ease;
+		}
+		&:hover {
+			background-color: transparent;
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	.cart-page__table__metatitle {
+		font-size: 14px;
+		line-height: 22px;
+		color: rgba($wallpi-text3-rgb);
+	}
+	.cart-page__cartprice,
+	.cart-page__cartname,
+	.cart-page__flatrate,
+	.cart-page__titlename {
+		position: relative;
+		z-index: 2;
+	}
+	.cart-page__cartname {
+		font-size: 20px;
+	}
+	.cart-page__table__metaimg {
+		width: 52px;
+		min-width: 52px;
+		border-radius: 4px;
+		background-color: rgba($wallpi-text-dark2-white-rgb,0.4);
+		padding: 8.5px 7px;
+		margin-right: 12px;
+	}
+	.cart-page__table__metaimg img {
+		max-width: 36px;
+		max-height: initial
+	}
+	.change-address {
+		color: $wallpi-base;
+		&::after {
+			border-bottom-color: $wallpi-base;
+		}
+	}
+
+	&__payment {
+		padding-bottom: 54px !important;
+		.checkout-page__cost-process-title { margin-bottom: 39px;}
+		&__select {
+			input[type="checkbox"] {
+				display: none;
+			}
+			label {
+				position: relative;
+				padding-left: 46px;
+				cursor: pointer;
+				font-family: $wallpi-font;
+				font-weight: 400;
+				font-size: $body-size;
+				line-height: 1;
+				color: $wallpi-text;
+				height: 50px;
+				border: 1px solid $wallpi-text;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				transition: all 0.4s;
+				span:before {
+					position: absolute;
+					width: auto;
+					height: 100%;
+					top: 0;
+					left: 20px;
+					bottom: 0;
+					line-height: 1;
+					display: flex;
+					align-items: center;
+					color: $wallpi-white;
+					font-family: 'icomoon' !important;
+					content: "\e910";
+					font-size: 16px;
+					font-weight: 900;
+					color: $wallpi-text;
+					-webkit-transition: all 0.15s ease-in-out;
+					transition: all 0.15s ease-in-out;
+					opacity: 1;
+				}
+				&:hover {
+					border-color: $wallpi-base;
+					background-color: $wallpi-white;
+					span:before {
+						color: $wallpi-base;
+					}
+				}
+			}
+
+			input[type="checkbox"]+label span {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				width: auto;
+				height: 100%;
+				border: none;
+				vertical-align: middle;
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+				-webkit-transition: all 300ms ease;
+				-moz-transition: all 300ms ease;
+				-ms-transition: all 300ms ease;
+				-o-transition: all 300ms ease;
+				transition: all 300ms ease;
+			}
+
+			input[type="checkbox"]:checked+label {
+				border-color: $wallpi-base;
+				background-color: $wallpi-white;
+			}
+			input[type="checkbox"]:checked+label span:before {
+				opacity: 1;
+				color: $wallpi-base;
+			}
+		}
+		&__select + &__select { margin-top: 11px; }
+
+		.payment_condition-check { padding-top: 33px; }
+		.place-oder-btn-wrap { padding-top: 23px; }
+		.place-oder-btn {
+			color: $wallpi-text-white;
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 1;
+			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 50px;
+			background-color: $wallpi-base;
+			border-radius: 4px;
+			margin: 0;
+			&::before {
+				background-color: $wallpi-base;
+			}
+			&::after {
+				background-color: $wallpi-black;
+			}
+			&:hover {
+				background-color: $wallpi-base;
+				color: $wallpi-white;
+			}
+		}
+		.checkout-page__check-box label {
+			font-weight: 400;
+		}
+	}
+}

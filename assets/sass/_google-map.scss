@@ -1,0 +1,23 @@
+.google-map {
+  position: relative;
+  iframe {
+    position: relative;
+    display: block;
+    border: none;
+    height:570px;
+    width: 100%;
+    mix-blend-mode: luminosity;
+  }
+  &__contact {
+    overflow: hidden;
+    background-color: $wallpi-gray;
+  }
+}
+.contact-map {
+  position: relative;
+  margin-bottom: -60px;
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

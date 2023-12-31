@@ -1,0 +1,85 @@
+.form-one {
+  &__group {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    margin: 0;
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__control {
+    border: none;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    padding: 0;
+    position: relative;
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%);
+      font-size: 14px;
+    }
+
+    &--full {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
+
+  .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100%;
+    height: 58px;
+    display: flex;
+    align-items: center;
+  }
+
+  .bootstrap-select>.dropdown-toggle {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    outline: none !important;
+    color: $wallpi-text;
+    font-size: 14px;
+  }
+
+  .bootstrap-select>.dropdown-toggle,
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    display: block;
+    width: 100%;
+    height: 58px;
+    background-color: $wallpi-gray;
+    color: $wallpi-text;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  textarea {
+    height: 195px;
+    padding-top: 20px;
+  }
+
+  .bootstrap-select>.dropdown-toggle {
+    display: flex;
+    align-items: center;
+
+    .filter-option {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+
+}

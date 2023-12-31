@@ -1,0 +1,48 @@
+body.boxed-wrapper {
+    position: relative;
+    .page-wrapper {
+        max-width: 1530px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: $wallpi-white;
+        box-shadow: 0px 0px 100px 0px rgba($wallpi-black-rgb, 0.08);
+    }
+
+    .consultation-one__colimg__image__circlemediam {
+        right: 20px;
+        width: 360px;
+        height: 360px;
+        @media (max-width:1200px) {
+            width: 300px;
+            height: 300px;
+        }
+        @media (max-width:480px) {
+            width: 270px;
+            height: 270px;
+        }
+    }
+    .consultation-one__colimg__image__circlesmall {
+        right: 220px;
+        bottom: 95px;
+        width: 300px;
+        height: 300px;
+        @media (max-width:1200px) {
+            right: 180px;
+            width: 250px;
+            height: 250px;
+        }
+        @media (max-width:480px) {
+            right: 86px;
+            bottom: 145px;
+            width: 220px;
+            height: 220px;
+        }
+    }
+
+    .main-slider-one__carousel.owl-carousel .owl-nav {
+        max-width: 205px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+}

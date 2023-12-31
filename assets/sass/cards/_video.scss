@@ -1,0 +1,214 @@
+.video-one {
+  position: relative;
+  background-color: $wallpi-black;
+  padding: 100px 0;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $wallpi-black;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.5;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  &__btn {
+    width: 145px;
+    height: 145px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+
+    .video-popup {
+      font-size: 24px;
+      color: $wallpi-white;
+      transition: all 500ms ease;
+      position: relative;
+      z-index: 10;
+
+      &:hover {
+        color: $wallpi-base;
+      }
+    }
+
+    .curved-circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 145px;
+      height: 145px;
+      transform-origin: center center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: textRotate 15s linear 0s forwards infinite alternate;
+    }
+
+    .curved-circle--item {
+      width: 145px;
+
+      span {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $wallpi-white;
+        letter-spacing: .4em;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    color: $wallpi-white;
+    font-size: 40px;
+    line-height: 1.2em;
+    margin-bottom: 40px;
+    margin-top: 30px;
+
+    @include devices(md) {
+      font-size: 50px;
+    }
+
+    @include devices(lg) {
+      font-size: 60px;
+      margin-top: 20px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__link {
+    &::before {
+      background-color: $wallpi-base;
+    }
+  }
+
+}
+
+.video-two {
+  position: relative;
+  background-color: $wallpi-black;
+  padding: 143px 0 320px;
+
+  @media (max-width: 767px) {
+    padding: 100px 0 270px;
+
+    .text-end {
+      text-align: left !important;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $wallpi-black;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
+  &__shape {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__btn {
+    width: 145px;
+    height: 145px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 42px;
+
+    .video-popup {
+      font-size: 24px;
+      color: $wallpi-white;
+      transition: all 500ms ease;
+      position: relative;
+      z-index: 10;
+
+      &:hover {
+        color: $wallpi-base;
+      }
+    }
+
+    .curved-circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 145px;
+      height: 145px;
+      transform-origin: center center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: textRotate 15s linear 0s forwards infinite alternate;
+    }
+
+    .curved-circle--item {
+      width: 145px !important;
+      height: 145px !important;
+
+      span {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $wallpi-white;
+        letter-spacing: .4em;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    color: $wallpi-white;
+    font-size: 40px;
+    line-height: 1.2em;
+    margin-bottom: 40px;
+
+    @include devices(md) {
+      font-size: 50px;
+    }
+
+    @include devices(lg) {
+      font-size: 60px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__link {
+    &::before {
+      background-color: $wallpi-base;
+    }
+  }
+
+}

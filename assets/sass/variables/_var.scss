@@ -1,0 +1,100 @@
+:root {
+	--wallpi-font: 'Inter', sans-serif;
+	--wallpi-heading-font: 'Pathway Extreme', sans-serif;
+	--wallpi-special-font: 'Kumbh Sans', sans-serif;
+
+	--wallpi-text: #2a2826;
+	--wallpi-text-rgb: #{toRGB(#2a2826)};
+	--wallpi-text2: #0f0e0e;
+	--wallpi-text2-rgb: #{toRGB(#0f0e0e)};
+	--wallpi-text3: #172000;
+	--wallpi-text3-rgb: #{toRGB(#172000)};
+	--wallpi-text-dark: #241c14;
+	--wallpi-text-dark-rgb: #{toRGB(#241c14)};
+	--wallpi-text-gray: #716a63;
+	--wallpi-text-gray-rgb: #{toRGB(#716a63)};
+	--wallpi-text-gray2: #565555;
+	--wallpi-text-gray2-rgb: #{toRGB(#565555)};
+	--wallpi-text-gray-dark: #4a4444;
+	--wallpi-text-gray-dark-rgb: #{toRGB(#4a4444)};
+	--wallpi-text-gray2-dark: #786d69;
+	--wallpi-text-gray2-dark-rgb: #{toRGB(#786d69)};
+	--wallpi-text-white: #fff;
+	--wallpi-text-white-rgb: #{toRGB(#fff)};
+	--wallpi-text-white2: #d3d0cd;
+	--wallpi-text-white2-rgb: #{toRGB(#d3d0cd)};
+	--wallpi-text-dark2-white: #bdbdbc;
+	--wallpi-text-dark2-white-rgb: #{toRGB(#bdbdbc)};
+	--wallpi-base: #d18548;
+	--wallpi-base-rgb: #{toRGB(#d18548)};
+	--wallpi-gray: #f9f6f1;
+	--wallpi-gray-rgb: #{toRGB(#f9f6f1)};
+	--wallpi-white: #fff;
+	--wallpi-white-rgb: #{toRGB(#fff)};
+	--wallpi-black: #2a2826;
+	--wallpi-black-rgb: #{toRGB(#2a2826)};
+	--wallpi-black2: #4a3626;
+	--wallpi-black2-rgb: #{toRGB(#4a3626)};
+	--wallpi-black3: #000;
+	--wallpi-black3-rgb: #{toRGB(#000)};
+	--wallpi-lightpink: #ece4de;
+	--wallpi-lightpink-rgb: #{toRGB(#ece4de)};
+	--wallpi-lightpink2: #f5ebe4;
+	--wallpi-lightpink2-rgb: #{toRGB(#f5ebe4)};
+	
+	--wallpi-border-color: #3c3a39;
+	--wallpi-border-color-rgb: #{toRGB(#3c3a39)};
+	--wallpi-letter-space: 0.1em;
+	--wallpi-letter-space-xl: 0.2em;
+}
+
+
+$wallpi-font:var(--wallpi-font, 'Inter', sans-serif);
+$wallpi-heading-font:var(--wallpi-heading-font, 'Pathway Extreme', sans-serif);
+$wallpi-special-font:var(--wallpi-special-font, 'Kumbh Sans', sans-serif);
+
+$wallpi-text:var(--wallpi-text, #2a2826);
+$wallpi-text-rgb:var(--wallpi-text-rgb, #{toRGB(#2a2826)});
+$wallpi-text2:var(--wallpi-text2, #0f0e0e);
+$wallpi-text2-rgb:var(--wallpi-text2-rgb, #{toRGB(#0f0e0e)});
+$wallpi-text3:var(--wallpi-text3, #172000);
+$wallpi-text3-rgb:var(--wallpi-text3-rgb, #{toRGB(#172000)});
+$wallpi-text-dark:var(--wallpi-text-dark, #241c14);
+$wallpi-text-dark-rgb:var(--wallpi-text-dark-rgb, #{toRGB(#241c14)});
+$wallpi-text-gray:var(--wallpi-text-gray, #716a63);
+$wallpi-text-gray-rgb:var(--wallpi-text-gray-rgb, #{toRGB(#716a63)});
+$wallpi-text-gray2:var(--wallpi-text-gray2, #565555);
+$wallpi-text-gray2-rgb:var(--wallpi-text-gray2-rgb, #{toRGB(#565555)});
+$wallpi-text-gray-dark:var(--wallpi-text-gray-dark, #4a4444);
+$wallpi-text-gray-dark-rgb:var(--wallpi-text-gray-dark-rgb, #{toRGB(#4a4444)});
+$wallpi-text-gray2-dark:var(--wallpi-text-gray2-dark, #786d69);
+$wallpi-text-gray2-dark-rgb:var(--wallpi-text-gray2-dark-rgb, #{toRGB(#786d69)});
+$wallpi-text-white:var(--wallpi-text-white, #fff);
+$wallpi-text-white-rgb:var(--wallpi-text-white-rgb, #{toRGB(#fff)});
+$wallpi-text-white2:var(--wallpi-text-white2, #d3d0cd);
+$wallpi-text-white2-rgb:var(--wallpi-text-white2-rgb, #{toRGB(#d3d0cd)});
+$wallpi-text-dark2-white:var(--wallpi-text-dark2-white, #bdbdbc);
+$wallpi-text-dark2-white-rgb:var(--wallpi-text-dark2-white-rgb, #{toRGB(#bdbdbc)});
+
+$wallpi-base:var(--wallpi-base, #d18548);
+$wallpi-base-rgb:var(--wallpi-base-rgb, #{toRGB(#d18548)});
+$wallpi-gray:var(--wallpi-gray, #f9f6f1);
+$wallpi-gray-rgb:var(--wallpi-gray-rgb, #{toRGB(#f9f6f1)});
+$wallpi-white:var(--wallpi-white, #fff);
+$wallpi-white-rgb:var(--wallpi-white-rgb, #{toRGB(#fff)});
+$wallpi-black:var(--wallpi-black, #2a2826);
+$wallpi-black-rgb:var(--wallpi-black-rgb, #{toRGB(#2a2826)});
+$wallpi-black2:var(--wallpi-black2, #4a3626);
+$wallpi-black2-rgb:var(--wallpi-black2-rgb, #{toRGB(#4a3626)});
+$wallpi-black3:var(--wallpi-black3, #000);
+$wallpi-black3-rgb:var(--wallpi-black3-rgb, #{toRGB(#000)});
+$wallpi-lightpink:var(--wallpi-lightpink, #ece4de);
+$wallpi-lightpink-rgb:var(--wallpi-lightpink-rgb, #{toRGB(#ece4de)});
+
+$wallpi-lightpink2:var(--wallpi-lightpink2, #f5ebe4);
+$wallpi-lightpink2-rgb:var(--wallpi-lightpink2-rgb, #{toRGB(#f5ebe4)});
+
+$wallpi-border-color:var(--wallpi-border-color, #2a2826);
+$wallpi-border-color-rgb:var(--wallpi-border-color-rgb, #{toRGB(#2a2826)});
+$wallpi-letter-space:var(--wallpi-letter-space, 0.1em);
+$wallpi-letter-space-xl:var(--wallpi-letter-space-xl, 0.2em);

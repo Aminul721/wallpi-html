@@ -1,0 +1,551 @@
+.team-one {
+  padding-top: 107px;
+  padding-bottom: 0;
+  margin-bottom: -265px;
+  position: relative;
+  z-index: 2;
+  @media (max-width:991px) {
+    padding-top: 68px;
+  }
+  .container {
+    @media (max-width:1200px) {
+      max-width: 100%;
+    }
+  }
+  &__sec-title-wrap {
+    gap: 0 84px;
+    padding-bottom: 0;
+    @media (max-width:1200px) {
+      flex-wrap: wrap;
+      padding-bottom: 45px;
+    }
+  }
+  .sec-title {
+    text-align: left;
+    width: calc((48.5% - 42px) / 1);
+    @media (max-width:1200px) {
+      width: 100%;
+    }
+    @media (max-width:991px) {
+        padding-bottom: 20px;
+    }
+    &__tagline {
+      &::before,
+      &::after {
+        margin: 0;
+      }
+      &::after {
+        height: 2px;
+      }
+    }
+    &__title {
+      text-align: left;
+      font-size: 60px;
+      line-height: 62px;
+      margin-top: 8px;
+      @media (max-width:991px) {
+        font-size: 48px;
+        line-height: 52px;
+      }
+      @media (max-width:767px) {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  &__sec-info-wrap {
+    width: calc((51.5% - 42px) / 1);
+    background-color: #f8f8f8;
+    height: 100%;
+    padding: 28px 25px 26px 30px;
+    margin-top: 20px;
+    @media (max-width:1200px) {
+      width: 100%;
+    }
+  }
+  &__sec-info-text {
+    color: rgba($wallpi-text3-rgb, 0.8);
+    font-size: $body-size;
+    line-height: 32px;
+    margin-bottom: 0;
+  }
+
+  &__carousel {
+    &.wallpi-owl__carousel--basic-nav {
+      .owl-nav {
+        display: none;
+      }
+    }
+  }
+
+  &--page {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin-bottom: 0;
+    @media (max-width:991px) {
+      padding-top: 68px;
+      padding-bottom: 82px;
+    }
+    .team-card__image {
+      img {
+        width: 100% !important;
+        min-height: initial;
+        max-height: initial;
+      }
+    }
+  }
+  
+  &--aboutpage {
+    margin-bottom: 0;
+    padding-top: 110px;
+    padding-bottom: 68px;
+    
+    @media (max-width:991px) {
+      padding-bottom: 72px;
+      padding-top: 58px;
+    }
+  }
+}
+
+.team-card {
+  border: 1px solid $wallpi-text;
+  border-radius: 8px;
+  padding: 26px;
+  padding-bottom: 30px;
+  &__image {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      background-color: rgba($wallpi-black2-rgb,0.3);
+      transition: all 0.5s ease;
+    }
+    img {
+      position: relative;
+      max-width: 100%;
+      min-height: 242px;
+      max-height: 242px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0 !important;
+
+    }
+  }
+
+  &__hover {
+    position: absolute;
+    bottom: -23px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+
+  &__social {
+    background-color: $wallpi-white;
+    position: relative;
+    cursor: pointer;
+    transition: all 500ms ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      background-color: $wallpi-white;
+      & > i {
+        color: $wallpi-base;
+      }
+    }
+    & > i {
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $wallpi-text;
+      transition: all 500ms ease;
+    }
+    &__list {
+      position: absolute;
+      width: calc(100% + 140px);
+      top: 0;
+      left:-70px;
+      transform:translateY(-200%) scale(1, 1);
+      background-color: $wallpi-black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      min-height: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+      transition: 500ms ease;
+      transform-origin: top center;
+      opacity: 0;
+      visibility: hidden;
+      a {
+        color: $wallpi-white;
+        font-size: 14px;
+        transition: all 500ms ease;
+        +a {
+          margin-left: 27px;
+        }
+        &:hover {
+          color: $wallpi-base;
+        }
+      }
+    }
+    &:hover &__list {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-100%) scale(1, 1);
+    }
+  }
+
+  &__content {
+    padding: 31px 20px 15px 20px;
+    background-color: #f1eeee;
+    text-align: center;
+  }
+  
+  &__title {
+    margin: 0;
+    font-size: $heading-size4;
+    line-height: 25px;
+    color: $wallpi-text-dark;
+    text-align: center;
+    font-weight: 600;
+    
+    a {
+      color: inherit;
+      @include borderHover;
+      
+      &:hover {
+        color: $wallpi-base;
+      }
+    }
+  }
+  
+  &__designation {
+    margin: 0;
+    font-family: $wallpi-font;
+    font-size: $body-size;
+    line-height: 1;
+    text-align: center;
+    color: rgba($wallpi-text-dark-rgb,0.8);
+  }
+
+  &:hover {
+    .team-card__social {
+      background-color: $wallpi-base;
+      & > i {
+        color: $wallpi-text-white;
+      }
+    }
+    .team-card__image::before {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.team-details {
+  padding-top: 119px;
+
+  @media (max-width: 767px) {
+    padding: 80px 0 0;
+    padding-top: 60px;
+  }
+  .container {
+    @media (max-width: 1200px) {
+      max-width: 100%;
+    }
+  }
+
+  &__inner {
+    border-bottom: 1px solid $wallpi-border-color;
+    padding-bottom: 120px;
+  }
+
+  &__image {
+    display: inline-block;
+    position: relative;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+    @include devices(lg) {
+      padding-left: 70px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    background-color: $wallpi-base;
+    border: 20px solid $wallpi-white;
+    width: 220px;
+    padding: 30px;
+    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+
+    @include devices(lg) {
+      left: -96px;
+    }
+
+    i {
+      font-size: 60px;
+      color: $wallpi-white;
+    }
+
+    &__text {
+      margin: 0;
+      font-size: 18px;
+      color: $wallpi-white;
+      text-transform: uppercase;
+      max-width: 104px;
+      font-weight: bold;
+      margin-bottom: -5px;
+      margin-top: 10px;
+
+      @include devices(md) {
+        font-size: 20px;
+      }
+
+      @include devices(lg) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1;
+    margin-top: -7px;
+    margin-bottom: 6px;
+
+    @include devices(md) {
+      font-size: 35px;
+    }
+
+    @include devices(lg) {
+      font-size: 40px;
+    }
+  }
+
+  &__designation {
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 2em;
+  }
+
+  &__highlight {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $wallpi-base;
+    font-size: 20px;
+    font-family: $wallpi-heading-font;
+    line-height: 1.3em;
+    margin-top: 44px;
+    margin-bottom: 44px;
+  }
+
+  &__list {
+    margin-bottom: 0;
+
+    li {
+      position: relative;
+      font-size: 16px;
+      line-height: 2.25em;
+      padding-left: 27px;
+      color: $wallpi-black;
+
+      >i {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 14px;
+        color: $wallpi-base;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $wallpi-gray;
+      font-size: 14px;
+      color: $wallpi-black;
+      transition: all 500ms ease;
+      border-radius: 50%;
+
+      &:hover {
+        background-color: $wallpi-base;
+        color: $wallpi-white;
+      }
+    }
+  }
+}
+
+.team-skills-one {
+  padding: 115px 0;
+  padding-bottom: 120px;
+
+  @media (max-width: 767px) {
+    padding: 60px 0;
+  }
+  .container {
+    @media (max-width: 1200px) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    color: $wallpi-black;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+
+    @include devices(md) {
+      font-size: 30px;
+    }
+
+    @include devices(md) {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 2em;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  &__progress {
+    +.team-skills-one__progress {
+      margin-top: 17px;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    &__bar {
+      width: 100%;
+      height: 17px;
+      border: 1px solid $wallpi-border-color;
+      box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.15);
+      position: relative;
+
+    }
+
+    &__inner {
+      position: absolute;
+      height: calc(100% - 6px);
+      left: 4px;
+      top: 3px;
+      background-color: $wallpi-base;
+      transition: all 700ms linear;
+      width: 0px;
+    }
+
+    &__number {
+      position: absolute;
+      bottom: calc(100% + 5px);
+      right: 0;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+
+.team-form-one {
+  position: relative;
+  padding: 108px 0;
+  padding-bottom: 179px;
+  margin-bottom: -60px;
+
+  @media (max-width: 767px) {
+    padding: 68px 0;
+    padding-bottom: 115px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    opacity: 0.8;
+    mix-blend-mode: luminosity;
+  }
+
+  .container {
+    position: relative;
+    max-width: 800px;
+  }
+
+  .sec-title {
+    text-align: center;
+  }
+
+  .form-one {
+
+    .bootstrap-select>.dropdown-toggle,
+    input[type=text],
+    input[type=email],
+    textarea {
+      background-color: $wallpi-white;
+    }
+
+    textarea {
+      height: 188px;
+    }
+  }
+  .wallpi-btn {
+    margin: 0 auto;
+  }
+}
